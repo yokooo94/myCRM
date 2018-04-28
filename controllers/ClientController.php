@@ -48,4 +48,27 @@ class ClientController
 
         return true;
     }
+
+       /**
+     * Action для клиента компании
+     */
+    public function actionClient($id)
+    {
+        //Текущий пользовать
+        $user = User::getCurrentUser();
+
+        $client = R::load(Constants::TABLE_CLIENT, $id);
+
+        $smarty = SmartyHelper::create();
+        $pathMenu = ROOT . '/views/cabinet/includes/menu.tpl';
+
+        $smarty->assign('pathMenu', $pathMenu);
+        $smarty->assign('user', $user);
+        $smarty->assign('client',$client);
+
+        // Подключаем вид
+        $smarty->display(ROOT . '/views/client/client.tpl');
+
+        return true;
+    }
 }

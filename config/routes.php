@@ -1,11 +1,15 @@
 <?php
 
 return array(
+    //Подъемники
+    'cabinet/box/([0-9]+)' => 'box/index/$1', //actionIndix в BoxController
+
     //Автосервисы
-    'cabinet/autoservice/([0-9]+)' => 'autoService/autoService/$1', //actionAutoSerivce в AutoServiceController
+    'cabinet/autoservice/([0-9]+)' => 'autoService/autoService/$1', //actionAutoService в AutoServiceController
     'cabinet/autoservice' => 'autoService/index', //actionIndex в AutoServiceController
 
     //Клиенты
+    'cabinet/client/([0-9]+)' => 'client/client/$1', //actionClient в ClientController
     'cabinet/client' => 'client/index', //actionIndex в ClientController
 
     //Кабинет

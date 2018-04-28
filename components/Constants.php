@@ -20,4 +20,5 @@ class Constants
     const TABLE_CLIENT = 'client';
     const TABLE_AUTOSERVICE = 'autoservice';
     const TABLE_BOX = 'box';
+    const TABLE_RECORD = 'record';
 }
