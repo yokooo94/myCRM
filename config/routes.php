@@ -1,6 +1,10 @@
 <?php
 
 return array(
+    //Автосервисы
+    'cabinet/autoservice/([0-9]+)' => 'autoService/autoService/$1', //actionAutoSerivce в AutoServiceController
+    'cabinet/autoservice' => 'autoService/index', //actionIndex в AutoServiceController
+
     //Клиенты
     'cabinet/client' => 'client/index', //actionIndex в ClientController
 

@@ -18,4 +18,6 @@ class Constants
     const TABLE_USER = 'user';
     const TABLE_COMPANY = 'company';
     const TABLE_CLIENT = 'client';
+    const TABLE_AUTOSERVICE = 'autoservice';
+    const TABLE_BOX = 'box';
 }

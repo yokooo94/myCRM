@@ -31,7 +31,7 @@ class ClientController
             R::store($client);
 
             //Обновление контента
-            header('Location: '.$_SERVER['REQUEST_URI']); 
+            header('Location: ' . $_SERVER['REQUEST_URI']);
         }
 
         $smarty = SmartyHelper::create();
@@ -42,7 +42,6 @@ class ClientController
         $smarty->assign('pathAddClient', $pathAddClient);
         $smarty->assign('pathListClient', $pathListClient);
         $smarty->assign('user', $user);
-
 
         // Подключаем вид
         $smarty->display(ROOT . '/views/client/index.tpl');
