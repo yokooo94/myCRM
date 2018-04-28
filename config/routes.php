@@ -1,6 +1,9 @@
 <?php
 
 return array(
+    //Клиенты
+    'cabinet/client' => 'client/index', //actionIndex в ClientController
+
     //Кабинет
     'cabinet/signIn' => 'cabinet/signIn', // actionIndex в SignInController
     'cabinet/signUp' => 'cabinet/signUp', // actionIndex в SignUpController

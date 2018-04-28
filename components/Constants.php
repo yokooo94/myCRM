@@ -16,4 +16,6 @@ class Constants
 
     //TABLES
     const TABLE_USER = 'user';
+    const TABLE_COMPANY = 'company';
+    const TABLE_CLIENT = 'client';
 }

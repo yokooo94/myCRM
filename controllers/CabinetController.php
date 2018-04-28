@@ -15,7 +15,9 @@ class CabinetController
         $user = User::getCurrentUser();
 
         $smarty = SmartyHelper::create();
-        $smarty->assign("user", $user);
+        $pathMenu = ROOT . '/views/cabinet/includes/menu.tpl';
+        $smarty->assign('pathMenu', $pathMenu);
+        $smarty->assign('user', $user);
 
         // Подключаем вид
         $smarty->display(ROOT . '/views/cabinet/index.tpl');
@@ -69,6 +71,10 @@ class CabinetController
             $user = R::dispense(Constants::TABLE_USER);
             $user->email = $_POST["email"];
             $user->password = password_hash($_POST["password"], PASSWORD_DEFAULT);
+
+            $company = R::dispense(Constants::TABLE_COMPANY);
+            $company->name = $_POST['companyName'];
+            $user->company = $company;
             $user->token = User::generateToken();
 
             //Сохраняем пользователя
